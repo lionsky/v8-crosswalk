@@ -434,7 +434,7 @@ function asmModule(stdlib, imports, buffer) {
     return i4(ret);
   }
 
-  function notImports(a) {
+  function notImports() {
     var ret  = i4();
     ret = i4not(a);
     return i4(ret);
@@ -652,7 +652,7 @@ assertEquals(result.y, expected.y);
 assertEquals(result.z, expected.z);
 assertEquals(result.w, expected.w);
 
-var result = m.notImports(a);
+var result = m.notImports();
 assertEquals(result.x, expected.x);
 assertEquals(result.y, expected.y);
 assertEquals(result.z, expected.z);
